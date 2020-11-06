@@ -1,5 +1,19 @@
-# alpha_animes
-Estudo de HTML, CSS e JS para desenvolvimento de uma Landing Page responsiva.
+# Alphanimes
 
-# ATENÇÃO!
-Utilizem apenas o arquivo index.html para criar os elementos da página principal e de contato. Foi encontrado uma limitação no sistema de **objects** para a importação de outros arquivos HTML para o **index.html** que pode causar erros na visualização do página. Coloque a pasta **components/** dentro do **.gitignore** ou apague-a. Muito obrigado.
+## Objetivo
+Desenvolver uma Landing Page responsiva, utilizando as linguagens HTML, CSS e JS, a fim de: 
+- Melhorar o portifólio de projetos;
+- Trabalhar em equipe;
+- Ampliar os conhecimentos sobre programação.  
+
+## Regras de Negócio
+### Obrigatório
+- Navbar fixo (scroll = navbar muda de cor);
+- Carrosel (imagens);
+- Responsividade.
+
+### Opcional
+- Formulário de envio de mensagens (validação);
+- Progressive Web Aplication.
+
+**Obs.: Pode usar qualquer framework ou biblioteca.**
