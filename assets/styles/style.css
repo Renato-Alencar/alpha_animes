@@ -1,66 +1,61 @@
-* {
-    padding: 0;
-    margin: 0;
-}
 .light-theme {
-    --background-button-color: #b21e1e;
-    --select-background-color: #500909 ;
-
-    --text-button-color: #f3eded;
-    --select-text-color: #fdfdfd;
+    background-image: url(../images/background-image-light-theme.webp);
+    --text-color: #121212;
 }
 .dark-theme {
-    --background-button-color: #0E0533;
-    --select-background-color: #121212 ;
-
-    --text-button-color: #f3eded;
-    --select-text-color: #fdfdfd;
-}
-.menu {
-    width: 500px;
-    height: 500px;
-    background-color: rgba(0, 255, 42, 0.198);
+    background-image: url(../images/background-image-dark-theme.webp);
+    --text-color: #f3eded;
 }
 
-.buttons {
-    display: flex;
-    flex-direction: row;
-
-    justify-content: space-around;
-
-    padding-top: 10px;
-}
-
-#button_menu, .hidden-box, #change_mode {
-    width: 25%;
-    height: 15%;
-
-    background-color: var(--background-button-color);
-    color: var(--text-button-color); 
+.light-theme, .dark-theme {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
     
-    border: 1px solid var(--background-button-color);
+    padding-top: 12.2038vh;
+    padding-bottom: 9.36019vh;
 
-    font-size: 1.5em;
-    font-family: Rambla;
+    font-family: 'Rambla';
 
-    align-items: center;
-    justify-content: center;
+    color: var(--text-color);
+}
 
-    box-sizing: border-box;
-    display: flex;
+.container-fluid {
+    padding-top: 12.2038vh;
+}
+
+.container-fluid h2 {
+    font-size: calc(2vh + 18px);
+    font-weight: 500;
+}
+
+.card {
+
+    padding: 0 !important;
 
     cursor: pointer;
 }
 
-.hidden-box { visibility: hidden }
+.card-body {
 
-.show-box {
-    width: 50%;
-    height: 20%;
+    text-align: center;
 
-    visibility: visible;
+    font-size: calc(2vh + 5px) !important;
+    font-weight: 500 !important;
+
+    padding: 0 !important;
+
+    color: rgb(117, 2, 2);
 }
-.hidden-box:hover {
-    background-color: var(--select-background-color);
-    color: var(--select-text-color);
+
+.carousel-control-prev, .carousel-control-next {
+    height: 4vh !important;
+    width: 4vw !important;
+
+    top: calc(10% - 4vh) !important; 
+
+   align-content: flex-end;
 }
+
+
