@@ -1,18 +1,41 @@
-function showMenu() {
-    var box = document.getElementsByClassName('hidden-box');
-
-    for(var index = 0; index < box.length; index++) box[index].classList.toggle('show-box');
-}
-
-let bool = false;
-let selector = document.getElementById('body-color');
-
-function changeTheme() {
-    bool = !bool;
-    
-    if(bool) {
-        selector.classList.replace('light-theme','dark-theme');
-    } else {
-        selector.classList.replace('dark-theme','light-theme');
-    }
-}
+$('.carousel').slick({
+    accessibility: true,
+    arrows: true,
+    infinite: true,
+    autoplay: true,
+    autoplaySpeed:2000,
+    slidesToShow: 6,
+    slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 1920,
+        settings: {
+          slidesToShow: 5,
+        }
+      },
+      {
+        breakpoint: 1366,
+        settings: {
+          slidesToShow: 4,
+        }
+      },
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+        }
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 2,
+        }
+      },
+      {
+        breakpoint: 540,
+        settings: {
+          slidesToShow: 1,
+        }
+      }
+    ]
+  });
