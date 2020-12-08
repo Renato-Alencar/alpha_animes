@@ -1,25 +1,30 @@
 <?php
 
-function Api_get_anime()
+function Api_get_anime( $request )
 {
-    $args = array(
-        'post_type'     =>  'titulo-anime',
-        'fields'        =>  'ids'
+    $posts_data = array();
+    $posts = get_posts( 
+        array(
+            'post__not_in'      => get_option('sticky_posts'),
+            'posts_per_page'    => -1,
+            'post_type'         => 'titulo-anime'
+        )
     );
-    
-    $loop = new WP_Query($args);
 
-    while( $loop->have_posts() ) {
-        $loop->the_post();
-        $loopArray[] = array(
-            'ID'        =>  get_the_ID(),
-            'title'     =>  get_the_title(),
-            'content'   =>  get_the_excerpt(),
-            'imagem'    =>  get_the_post_thumbnail_url(),
+    foreach($posts as $post) {
+        $id = $post->ID;
+        $post_thumbnail = (has_post_thumbnail($id))
+        ? get_the_post_thumbnail_url($id) : null;
+
+        $posts_data[] = (object) array(
+            'id'        =>  $id,
+            'title'     =>  $post->post_title,
+            'content'     =>  $post->post_excerpt,
+            'imagem'    =>  $post_thumbnail,
         );
     }
 
-    return rest_ensure_response($loopArray);
+    return rest_ensure_response($posts_data);
 }
 
 function Registro_api_anime()
