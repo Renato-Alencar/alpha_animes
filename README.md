@@ -1,5 +1,3 @@
-# Alphanimes
-
 ## Objetivo
 Desenvolver uma Landing Page responsiva, utilizando as linguagens HTML, CSS e JS, a fim de: 
 - Melhorar o portifólio de projetos;
@@ -17,3 +15,11 @@ Desenvolver uma Landing Page responsiva, utilizando as linguagens HTML, CSS e JS
 - Progressive Web Aplication.
 
 **Obs.: Pode usar qualquer framework ou biblioteca.**
+
+# API em Wordpress
+
+Api feita com Wordpress para cadastro dos animes.
+
+### Requisitos:
+- Wordpress instalado
+- Colocar a pasta API dentro da pasta **themes** continda nas pastas padrões da instalação do wordpress.
