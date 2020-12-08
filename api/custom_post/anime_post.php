@@ -1,4 +1,7 @@
 <?php
+/** 
+ *  APi para uso do frontend
+ *  */
 
 function Cadastro_anime() 
 {
