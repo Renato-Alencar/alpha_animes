@@ -9,15 +9,15 @@ async function getAnimes() {
     } catch (error) { console.error(error) }
 }
 
-cardCarousel = getAnimes().then(cardAnime => {
+cardCarousel = getAnimes().then(cardsAnime => {
 
     let textCard = document.getElementsByClassName('text-card');
     let img = document.querySelectorAll('.card > img');
     
-    for(let index = 0; index < cardAnime.length; index++) {
-        textCard[index].innerHTML = cardAnime[index].title;
+    for(let [index, value] of cardsAnime.entries()) {
+        textCard[index].innerHTML = value.title;
 
-        img[index].src = cardAnime[index].imagem;
-        img[index].alt = cardAnime[index].title;
+        img[index].src = value.imagem;
+        img[index].alt = value.title;
     }
 });
