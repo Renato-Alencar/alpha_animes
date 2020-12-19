@@ -7,8 +7,7 @@
     --text-color: #f3eded;
 }
 
-.light-theme, 
-.dark-theme {
+.light-theme, .dark-theme {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -68,6 +67,8 @@ h2 {
 .carousel .slick-prev::before, 
 .carousel .slick-next::before {font-size: 2.5vw;}
 
+.card {outline: none;}
+
 .card img { 
     width: 100%;
     height: auto; 
@@ -97,5 +98,3 @@ h2 {
     border-bottom-right-radius: 7px;
     border-bottom-left-radius: 7px;
 }
-
-
