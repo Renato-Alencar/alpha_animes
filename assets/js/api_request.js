@@ -1,22 +1,23 @@
-import axios from 'axios';
+const api_url = 'http://localhost/wordpress/wp-json/api/v1/animes';
+var cardCarousel = [];
 
-const api_url = 'http://localhost/wordpress/wp-json/api/v1';
-
-const getAnimes = async() => {
+async function getAnimes() {
     try {
-        const response = (await axios.get(`${api_url}/animes`)).data;
-        return response;
+        const api_animes = (await fetch(`${api_url}`)).json();
+        return api_animes;
 
-    } catch(error) { console.error(`Error:`, error); }
-};
+    } catch (error) { console.error(error) }
+}
 
-getAnimes().then(animes => { animes.forEach(index => {
-    var titles = [], images = [];
-    titles.push(index.title);
-    images.push(index.imagem);
+cardCarousel = getAnimes().then(cardAnime => {
 
-    console.log(titles);
-    console.log(images);
-    })
+    let textCard = document.getElementsByClassName('text-card');
+    let img = document.querySelectorAll('.card > img');
+    
+    for(let index = 0; index < cardAnime.length; index++) {
+        textCard[index].innerHTML = cardAnime[index].title;
+
+        img[index].src = cardAnime[index].imagem;
+        img[index].alt = cardAnime[index].title;
+    }
 });
-
