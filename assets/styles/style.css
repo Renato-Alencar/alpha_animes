@@ -21,7 +21,12 @@
     color: var(--text-color);
 }
 
-h2 {
+.initial-page-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.initial-page-content h2 {
     padding-top: 10vh;
 
     margin: 0 1.5vw;
@@ -30,7 +35,7 @@ h2 {
     font-weight: 600;
 }
 
-.carousel {
+.initial-page-content .carousel {
     width: auto; 
     height: auto; 
 
@@ -39,7 +44,7 @@ h2 {
     margin: 0 1vw;
 }
 
-.carousel .card {
+.initial-page-content .carousel .card {
     width: auto;
     height: auto;
 
@@ -50,22 +55,22 @@ h2 {
     cursor: pointer;
 }
 
-.carousel .card:hover {
+.initial-page-content .carousel .card:hover {
     filter: brightness(75%); 
     transition: .2s;
 }
 
-.carousel button {width: auto;}
+.initial-page-content .carousel button {width: auto;}
 
-.carousel .slick-prev {
+.initial-page-content .carousel .slick-prev {
     z-index: 1;
     left: .5vw;
 }
 
-.carousel .slick-next {right: .5vw;}
+.initial-page-content .carousel .slick-next {right: .5vw;}
 
-.carousel .slick-prev::before, 
-.carousel .slick-next::before {font-size: 2.5vw;}
+.initial-page-content .carousel .slick-prev::before, 
+.initial-page-content .carousel .slick-next::before {font-size: 2.5vw;}
 
 .card {outline: none;}
 
