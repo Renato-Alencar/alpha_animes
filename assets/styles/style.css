@@ -1,3 +1,4 @@
+/* ==============Body================ */
 .light-theme {
     background-image: url(../images/background-image-light-theme.webp);
     --text-color: #121212;
@@ -12,9 +13,6 @@
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    
-    padding-top: 12.2038vh;
-    padding-bottom: 9.36019vh;
 
     font-family: Charcoal, sans-serif;
 
@@ -22,13 +20,15 @@
 }
 
 .initial-page-content {
+    width: 100vw;
+
+    margin: 3vh 0;
+
     display: flex;
     flex-direction: column;
 }
 
 .initial-page-content h2 {
-    padding-top: 10vh;
-
     margin: 0 1.5vw;
 
     font-size: clamp(1.45rem, 4vw, 3rem);
@@ -41,7 +41,7 @@
 
     align-content: center;
 
-    margin: 0 1vw;
+    margin: 0 1.5vw;
 }
 
 .initial-page-content .carousel .card {
@@ -85,7 +85,7 @@
     width: 100%;
     height: auto;
 
-    bottom: 0%;
+    bottom: 0;
 
     text-align: center;
 
@@ -103,3 +103,64 @@
     border-bottom-right-radius: 7px;
     border-bottom-left-radius: 7px;
 }
+
+/* ==============Footer================== */
+footer {
+    width: 100vw;
+    height: 10vh;
+
+    position: fixed;
+
+    bottom: 0;
+
+    background-color: #f3eded;
+}
+
+.footer-options {
+    height: 100%;
+    
+    display: flex;
+    flex-direction: row;
+
+    align-items: center;
+
+    overflow: hidden;
+    
+    justify-content: space-between;
+}
+
+.footer-options li {
+    width: 100%;
+    
+    padding: 5vh 0;
+
+    display: flex;
+    flex-direction: column;
+
+    text-align: center;
+}
+
+.footer-options li:hover {
+    cursor: pointer;
+
+    transition: .2s;
+
+    background-color: #c3c3c3;
+}
+
+.footer-options li .material-icons {
+    display: none;
+
+    color: #b21e1e;
+}
+
+.footer-options li a {
+    margin: 0 auto;
+
+    text-decoration: none;
+
+    font-size: clamp(.75rem, calc(1.1vw + 1.35vh), 2.4rem);
+    
+    color: #b21e1e;
+}
+
