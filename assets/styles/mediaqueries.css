@@ -1,6 +1,10 @@
 @media screen and (max-width:767px) and (max-height:1023px) {
-    h2 {text-align: center;}
+    .initial-page-content h2 {text-align: center;}
     
     .carousel .slick-prev, 
     .carousel .slick-next {visibility: hidden;}
+}
+
+@media screen and (max-width:425px) and (max-height:823px) {
+    .footer-options li .material-icons {display: block;}
 }
