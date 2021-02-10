@@ -1,4 +1,4 @@
-$('.carousel').slick({
+$('.carousel').slick ({
     accessibility: true,
     arrows: true,
     infinite: false,
@@ -32,8 +32,8 @@ $('.carousel').slick({
       {
         breakpoint: 540,
         settings: {
-          slidesToShow: 1,
+          slidesToShow: 2,
         }
       }
     ]
-  });
+});
