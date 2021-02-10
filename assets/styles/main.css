@@ -1,0 +1,28 @@
+:root {--text-color-primary: #f3ededda;}
+
+:root .light-theme {
+    background-image: url(../images/background-image-light-theme.webp);
+
+    --background-color: #db2929;
+    --select-background-color: #701616;
+    --text-title-color: #121212;
+}
+:root .dark-theme {
+    background-image: url(../images/background-image-dark-theme.webp);
+
+    --background-color: #03051af2;
+    --select-background-color: #020253;
+    --text-title-color: var(--text-color-primary);
+}
+
+body {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+    font-family: Charcoal, sans-serif;
+
+    background-color: var(--background-color);
+    color: var(--text-title-color);
+}

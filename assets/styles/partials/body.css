@@ -1,0 +1,82 @@
+.initial-page-content {
+    width: 100vw;
+
+    margin: 3vh 0;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.initial-page-content h2 {
+    margin: 0 1.5vw;
+
+    font-size: clamp(1.45rem, 4vw, 3rem);
+    font-weight: 600;
+
+    color: var(--text-title-color);
+}
+
+.initial-page-content .carousel {
+    align-content: center;
+
+    margin: 0 1.5vw;
+}
+
+.initial-page-content .carousel .card {
+    position: relative;
+
+    margin: .5vw;
+}
+
+.initial-page-content .carousel .card:hover {
+    cursor: pointer;
+
+    filter: brightness(65%); 
+    transition: .2s;
+}
+
+.initial-page-content .carousel .slick-prev {
+    z-index: 1;
+    left: .5vw;
+}
+
+.card {outline: none;}
+
+.card img {border-radius: 8px;}
+
+.card .text-card {
+    bottom: 0;
+
+    text-align: center;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    position: absolute;
+
+    font-size: clamp(1.15rem, 1.7vw + 1.2vh, 2.2rem);
+
+    background-color: var(--background-color);
+    color: var(--text-color-primary);
+
+    border-bottom-right-radius: 7px;
+    border-bottom-left-radius: 7px;
+}
+
+.card img, .card .text-card {
+    width: 100%;
+    height: auto;
+}
+
+.initial-page-content .carousel,
+.initial-page-content .carousel .card,
+.initial-page-content .carousel button {
+    width: auto;
+    height: auto;
+}
+
+.initial-page-content .carousel .slick-next {right: .5vw;}
+
+.initial-page-content .carousel .slick-prev::before, 
+.initial-page-content .carousel .slick-next::before {font-size: 2.5vw;}
