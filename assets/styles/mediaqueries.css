@@ -6,5 +6,5 @@
 }
 
 @media screen and (max-width:425px) and (max-height:823px) {
-    .footer-options li .material-icons {display: block;}
+    footer .footer-options li .material-icons {display: block;}
 }
