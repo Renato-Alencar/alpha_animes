@@ -1,18 +1,24 @@
-:root {--text-color-primary: #f3ededda;}
+:root {--text-color-primary: rgba(243, 237, 237, 0.855);}
 
 :root .light-theme {
     background-image: url(../images/background-image-light-theme.webp);
 
-    --background-color: #db2929;
-    --select-background-color: #701616;
-    --text-title-color: #121212;
+    --background-color: rgb(219, 41, 41);
+    --select-background-color: rgb(112, 22, 22);
+    --text-title-color: rgb(34, 33, 33);
+    --button-color-shadow1: rgb(131, 25, 25);
+    --button-color-shadow2: rgb(255, 57, 57);
+    --input-background-color: var(--text-color-primary);
 }
 :root .dark-theme {
     background-image: url(../images/background-image-dark-theme.webp);
 
-    --background-color: #03051af2;
-    --select-background-color: #020253;
+    --background-color: rgb(14, 14, 58);
+    --select-background-color: rgb(30, 30, 30);
     --text-title-color: var(--text-color-primary);
+    --button-color-shadow1:  #07072c;
+    --button-color-shadow2: #070720;
+    --input-background-color:  rgb(34, 33, 33);
 }
 
 body {
@@ -22,7 +28,4 @@ body {
     background-attachment: fixed;
 
     font-family: Charcoal, sans-serif;
-
-    background-color: var(--background-color);
-    color: var(--text-title-color);
 }
