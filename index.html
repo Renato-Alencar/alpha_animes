@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="/assets/styles/main.css">
     <link rel="stylesheet" href="/assets/styles/partials/header.css">
+    <link rel="stylesheet" href="/assets/styles/partials/menu_toogle.css">
     <link rel="stylesheet" href="/assets/styles/partials/body.css">
     <link rel="stylesheet" href="/assets/styles/partials/footer.css">
     <link rel="stylesheet" href="/assets/styles/partials/form.css">
@@ -19,6 +20,34 @@
     <title>ALPHANIMES</title>
   </head>
   <body class="light-theme">
+
+    <header>
+      <input id="menu-toogle" type="checkbox">
+
+      <label for="menu-toogle">
+          <div class="button">
+              <span class="burger-bar"></span>
+          </div>
+      </label>   
+
+      <h1><a href="#" class="logo">ALPHANIMES</a></h1>
+
+      <button class="theme">
+          <span class="material-icons" id="mode">light_mode</span>
+          <p>LIGHT</p>
+      </button>
+
+      <ul class="nav-options">
+          <nav class="searchbar">
+              <span href="#" class="material-icons">search</span>
+              <input class='search' type="text">
+          </nav>
+          <li><a href="#filme">Filme</a></li>
+          <li><a href="#tokusatsu">Tokusatsu</a></li>
+          <li><a href="#dublado">Dublado</a></li>
+          <li><a href="#legendado">Legendado</a></li>
+      </ul>
+  </header>
     
     <main class="initial-page-content">
       <h2>Lançamentos Semanais</h2>
@@ -91,23 +120,23 @@
       <ul class="footer-options">
         <li>
           <span class="material-icons">email</span>
-          <a href="#">Contato</a>
+          <a href="#contato">Contato</a>
         </li>
         <li>
           <span class="material-icons">assignment</span>
-          <a href="#">Termos de Uso</a>
+          <a href="#termosdeuso">Termos de Uso</a>
         </li>
         <li>
           <span class="material-icons">security</span>
-          <a href="#">Política de Privacidade</a>
+          <a href="#privacidade">Política de Privacidade</a>
         </li>
         <li>
           <span class="material-icons">public</span>
-          <a href="#">Redes Sociais</a>
+          <a href="#redessociais">Redes Sociais</a>
         </li>
         <li>
           <span class="material-icons">people</span>
-          <a href="#">Parceiros</a>
+          <a href="#parceiros">Parceiros</a>
         </li>
       </ul>
     </footer>
@@ -116,7 +145,9 @@
     <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick.js"></script>
     <script type='text/javascript' src="/assets/js/carousel.js"></script>
-    <script type='module' src="/assets/js/api_request.js"></script>
+    <script type='text/javascript' src="/assets/js/api_request.js"></script>
+    <script type='text/javascript' src="/assets/js/control.js"></script>
 
+    
   </body>
 </html>
