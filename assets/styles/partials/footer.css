@@ -44,7 +44,7 @@ footer .footer-options li .material-icons {display: none;}
 footer .footer-options li a {
     margin: 0 auto;
 
-    font-size: clamp(.75rem, 1.1vw + 1.35vh, 2.4rem);
+    font-size: clamp(.75rem, 1.1vw + .5rem, 2.4rem);
 }
 
 footer .footer-options, 

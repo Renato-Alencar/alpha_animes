@@ -1,7 +1,7 @@
 .initial-page-content {
     width: 100vw;
 
-    margin: 3vh 0;
+    margin-top: 10vh;
 
     display: flex;
     flex-direction: column;
@@ -15,27 +15,23 @@
 
     color: var(--text-title-color);
 }
-
-.initial-page-content .carousel {
+.carousel {
     align-content: center;
 
     margin: 0 1.5vw;
 }
-
-.initial-page-content .carousel .card {
+.carousel .card {
     position: relative;
 
     margin: .5vw;
 }
-
-.initial-page-content .carousel .card:hover {
+.carousel .card:hover {
     cursor: pointer;
 
     filter: brightness(65%); 
     transition: .2s;
 }
-
-.initial-page-content .carousel .slick-prev {
+.carousel .slick-prev {
     z-index: 1;
     left: .5vw;
 }
@@ -68,15 +64,11 @@
     width: 100%;
     height: auto;
 }
-
-.initial-page-content .carousel,
-.initial-page-content .carousel .card,
-.initial-page-content .carousel button {
+.carousel,.carousel .card,.carousel button {
     width: auto;
     height: auto;
 }
+.carousel .slick-next {right: .5vw;}
 
-.initial-page-content .carousel .slick-next {right: .5vw;}
-
-.initial-page-content .carousel .slick-prev::before, 
-.initial-page-content .carousel .slick-next::before {font-size: 2.5vw;}
+.carousel .slick-prev::before, 
+.carousel .slick-next::before {font-size: 2.5vw;}
