@@ -1,0 +1,51 @@
+* {
+    padding: 0;
+    margin: 0;
+    border: none;
+    box-sizing: border-box;
+}
+
+#menu-toogle, label .button {display: none}
+
+.button {
+    width: 30px;
+    height: 30px;
+
+    position: relative;
+
+    display: flex;
+    align-items: center;
+
+    border-radius: 8px;
+
+    box-shadow: 5px 5px 10px var(--button-color-shadow1),
+                -5px -5px 10px var(--button-color-shadow2);
+
+    background-color: var(--background-color);
+}
+
+.burger-bar {
+    top: 45%;
+    left: 17.5%;
+}
+
+.burger-bar,
+.burger-bar::after,
+.burger-bar::before {
+    width: 20px;
+    height: 3px;
+
+    position: absolute;
+
+    border-radius: 1px;
+
+    transition: .4s ease-in-out;
+
+    background-color: var(--text-title-color);
+}
+
+.burger-bar::after,
+.burger-bar::before {content: ''}
+
+.burger-bar::after{transform: translateY(-8px)}
+.burger-bar::before{transform: translateY(8px)}
