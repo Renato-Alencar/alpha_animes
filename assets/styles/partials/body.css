@@ -36,9 +36,9 @@
     left: .5vw;
 }
 
-.card {outline: none;}
+.card {outline: none}
 
-.card img {border-radius: 8px;}
+.card img {border-radius: 8px}
 
 .card .text-card {
     bottom: 0;
@@ -51,7 +51,7 @@
 
     position: absolute;
 
-    font-size: clamp(1.15rem, 1.7vw + 1.2vh, 2.2rem);
+    font-size: clamp(1.15rem, 1.5vw + .5rem, 2.2rem);
 
     background-color: var(--background-color);
     color: var(--text-color-primary);
@@ -68,7 +68,7 @@
     width: auto;
     height: auto;
 }
-.carousel .slick-next {right: .5vw;}
+.carousel .slick-next {right: .5vw}
 
 .carousel .slick-prev::before, 
-.carousel .slick-next::before {font-size: 2.5vw;}
+.carousel .slick-next::before {font-size: 2.5vw}
