@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!-- Links CSS -->
     <link rel="stylesheet" href="/assets/styles/reset.css">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick.css"/>
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick-theme.css"/>
@@ -30,7 +31,7 @@
           </div>
       </label>   
 
-      <h1><a href="#" class="logo">ALPHANIMES</a></h1>
+      <h1><a href="" class="logo">ALPHANIMES</a></h1>
 
       <button class="theme">
           <span class="material-icons" id="mode">light_mode</span>
@@ -47,7 +48,7 @@
           <li><a href="#dublado">Dublado</a></li>
           <li><a href="#legendado">Legendado</a></li>
       </ul>
-  </header>
+    </header>
     
     <main class="initial-page-content">
       <h2>Lançamentos Semanais</h2>
@@ -116,9 +117,32 @@
       </section>
     </main>
 
+    <form action="https://api.staticforms.xyz/submit" method="POST">
+      <input type="hidden" name="accessKey" value="CHAVE DE ACESSO STATIC FORMS">
+      <fieldset>
+        <div class="field">
+          <label>E-mail*</label>
+          <input type="email" name="email" id="email" required>
+        </div>
+        <div class="field">
+          <label>Assunto</label>
+          <input type="text" name="subject" id="subject">
+        </div>
+        <div class="field">
+          <label>Mensagem*</label>
+          <textarea rows="10" name="message" id="message" required></textarea>
+        </div>
+      </fieldset>
+      <div class="outside">
+        <a id='observation'>Obrigatório*</a>
+        <button type="submit" id="submit">ENVIAR</button>
+      </div>
+      <input type="hidden" name="redirectTo" value='http://127.0.0.1:5500/index.html'>
+    </form>
+
     <footer>
       <ul class="footer-options">
-        <li>
+        <li id="contact">
           <span class="material-icons">email</span>
           <a href="#contato">Contato</a>
         </li>
@@ -141,13 +165,12 @@
       </ul>
     </footer>
     
+    <!-- Links JavaScript -->
     <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick.js"></script>
     <script type='text/javascript' src="/assets/js/carousel.js"></script>
     <script type='text/javascript' src="/assets/js/api_request.js"></script>
     <script type='text/javascript' src="/assets/js/control.js"></script>
-
-    
   </body>
 </html>
