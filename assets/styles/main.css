@@ -1,4 +1,4 @@
-:root {--text-color-primary: rgba(243, 237, 237, 0.855);}
+:root {--text-color-primary: rgb(243, 237, 237)}
 
 :root .light-theme {
     background-image: url(../images/background-image-light-theme.webp);
@@ -14,10 +14,10 @@
     background-image: url(../images/background-image-dark-theme.webp);
 
     --background-color: rgb(14, 14, 58);
-    --select-background-color: rgb(30, 30, 30);
+    --select-background-color: rgb(2, 0, 26);
     --text-title-color: var(--text-color-primary);
-    --button-color-shadow1:  #07072c;
-    --button-color-shadow2: #070720;
+    --button-color-shadow1:  rgb(7, 7, 44);
+    --button-color-shadow2: rgb(7, 7, 32);
     --input-background-color:  rgb(34, 33, 33);
 }
 
@@ -26,6 +26,8 @@ body {
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
+
+    margin-top: 11vh;
 
     font-family: Charcoal, sans-serif;
 }
