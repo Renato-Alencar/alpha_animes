@@ -1,0 +1,67 @@
+form {
+    width: 70%;
+
+    display: none;
+
+    margin: auto;
+}
+
+fieldset {width: 100%}
+
+.field, .outside {display: flex}
+
+.field {flex-direction: column}
+
+.field input {
+    width: 50%;
+
+    margin-bottom: 2vh;
+}
+
+.outside {
+    align-items: center;
+    justify-content: space-between;
+}
+
+.outside #submit {
+    padding: 1.5vh;
+
+    color: var(--text-color-primary);
+    background-color: var(--background-color);
+}
+
+.outside #submit:hover {
+    transition: .2s;
+
+    cursor: pointer;
+
+    background-color: var(--select-background-color);
+}
+
+#submit, #observation, .field label {
+    font-size: large;
+    font-weight: bold;
+
+    margin-top: 2vh;
+
+    color: var(--text-title-color);
+}
+
+#submit, .field input, textarea {
+    border-radius: 4px;
+
+    outline: none;
+    border: none;
+
+    font-size: medium;
+}
+
+.field input, textarea {
+    border: 1px solid black;
+
+    font-family: Charcoal, sans-serif;
+
+    color: var(--text-title-color);
+    background-color: var(--input-background-color);
+}
+
