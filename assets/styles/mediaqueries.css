@@ -1,27 +1,35 @@
 @media screen and (max-width:767px) {
     header {
-        overflow: visible;
         justify-content: space-around;
+
+        overflow: visible;
+        
+        z-index: 1;
     }
 
-    label .button {display: block}
+    form {width: 90%}
+
+    .field input {width: 97.75%}
+
+    .nav-options {display: none}
 
     #menu-toogle:checked ~ .nav-options {
-        position: absolute;
+        flex-direction: column;
 
-        display: block;
+        position: absolute;
 
         top: 9.85vh;
 
-        flex-direction: column;
-
         text-align: center;
 
-        background-color: var(--background-color);     
+        background-color: var(--background-color);
     }
 
     #menu-toogle:checked ~ .nav-options,
-    .nav-options li {width: 100%}
+    label .button {display: block}
+
+    #menu-toogle:checked ~ .nav-options,
+    .nav-options li {width: 100vw}
 
     .searchbar {
         margin: 2vh auto;
@@ -38,13 +46,6 @@
     }
 
     .initial-page-content h2 {text-align: center}
-
-    .nav-options,
-    .carousel .slick-prev, 
-    .carousel .slick-next {display: none}
-    
-    .carousel .slick-prev, 
-    .carousel .slick-next {visibility: hidden}
 }
 
 @media screen and (max-width:425px) {
