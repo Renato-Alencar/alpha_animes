@@ -1,5 +1,5 @@
-## Objetivo
-Desenvolver uma Landing Page responsiva, utilizando as linguagens HTML, CSS e JS, a fim de: 
+# Objetivo
+Desenvolver uma Landing Page responsiva, utilizando as tecnologias HTML, CSS e JavaScript, a fim de: 
 - Melhorar o portifólio de projetos;
 - Trabalhar em equipe;
 - Ampliar os conhecimentos sobre programação.  
@@ -14,12 +14,12 @@ Desenvolver uma Landing Page responsiva, utilizando as linguagens HTML, CSS e JS
 - Formulário de envio de mensagens (validação);
 - Progressive Web Aplication.
 
-**Obs.: Pode usar qualquer framework ou biblioteca.**
+**Obs.: Pode usar qualquer framework ou biblioteca.**<br>
+**Obs2.: Envio do formulário: o usuário precisa obter a chave de acesso na página da [Static Forms](https://www.staticforms.xyz/) e colar no campo indicado (*value*) da primeira *tag input* dentro da *tag form* no arquivo HTML.**
 
-# API em Wordpress
-
-Api feita com Wordpress para cadastro dos animes.
+# API em WordPress
+API feita em PHP para cadastro dos animes no WordPress.
 
 ### Requisitos:
-- Wordpress instalado
+- WordPress instalado
 - Colocar a pasta API dentro da pasta **themes** continda nas pastas padrões da instalação do wordpress.
