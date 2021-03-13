@@ -1,0 +1,74 @@
+.initial-page-content {
+    width: 100vw;
+
+    margin-top: 10vh;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.initial-page-content h2 {
+    margin: 0 1.5vw;
+
+    font-size: clamp(1.45rem, 4vw, 3rem);
+    font-weight: 600;
+
+    color: var(--text-title-color);
+}
+.carousel {
+    align-content: center;
+
+    margin: 0 1.5vw;
+}
+.carousel .card {
+    position: relative;
+
+    margin: .5vw;
+}
+.carousel .card:hover {
+    cursor: pointer;
+
+    filter: brightness(65%); 
+    transition: .2s;
+}
+.carousel .slick-prev {
+    z-index: 1;
+    left: .5vw;
+}
+
+.card {outline: none}
+
+.card img {border-radius: 8px}
+
+.card .text-card {
+    bottom: 0;
+
+    text-align: center;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    position: absolute;
+
+    font-size: clamp(1.15rem, 1.5vw + .5rem, 2.2rem);
+
+    background-color: var(--background-color);
+    color: var(--text-color-primary);
+
+    border-bottom-right-radius: 7px;
+    border-bottom-left-radius: 7px;
+}
+
+.card img, .card .text-card {
+    width: 100%;
+    height: auto;
+}
+.carousel,.carousel .card,.carousel button {
+    width: auto;
+    height: auto;
+}
+.carousel .slick-next {right: .5vw}
+
+.carousel .slick-prev::before, 
+.carousel .slick-next::before {font-size: 2.5vw}

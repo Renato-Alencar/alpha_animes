@@ -1,0 +1,33 @@
+:root {--text-color-primary: rgb(243, 237, 237)}
+
+:root .light-theme {
+    background-image: url(../images/background-image-light-theme.webp);
+
+    --background-color: rgb(219, 41, 41);
+    --select-background-color: rgb(112, 22, 22);
+    --text-title-color: rgb(34, 33, 33);
+    --button-color-shadow1: rgb(131, 25, 25);
+    --button-color-shadow2: rgb(255, 57, 57);
+    --input-background-color: var(--text-color-primary);
+}
+:root .dark-theme {
+    background-image: url(../images/background-image-dark-theme.webp);
+
+    --background-color: rgb(14, 14, 58);
+    --select-background-color: rgb(2, 0, 26);
+    --text-title-color: var(--text-color-primary);
+    --button-color-shadow1:  rgb(7, 7, 44);
+    --button-color-shadow2: rgb(7, 7, 32);
+    --input-background-color:  rgb(34, 33, 33);
+}
+
+body {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+    margin-top: 11vh;
+
+    font-family: Charcoal, sans-serif;
+}

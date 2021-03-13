@@ -1,16 +1,176 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
+  <head>
+    <!-- Required meta tags -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Training|HTML CSS JS</title>
-    <link rel="stylesheet" href="assets/styles/style.css">
-    <script src="assets/js/script.js" type="text/javascript" defer></script>
-</head>
-    <object data="components/header.html" type="text/html" style="background-color: tomato; width: 100%;"></object>
-    <!-- Isso é uma gambiarra, para testar jogue o seu código aqui -->
-    <body style="background-color: wheat;">
-        <object data="components/body.html" type="text/html" style="width: 100%; height: 80vh;"></object>
-    </body>
-    <object data="components/footer.html" type="text/html" style="width: 100%; height: 10vh; background: whitesmoke;"></object>
+
+    <!-- Links CSS -->
+    <link rel="stylesheet" href="/assets/styles/reset.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick-theme.css"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="/assets/styles/main.css">
+    <link rel="stylesheet" href="/assets/styles/partials/header.css">
+    <link rel="stylesheet" href="/assets/styles/partials/menu_toogle.css">
+    <link rel="stylesheet" href="/assets/styles/partials/body.css">
+    <link rel="stylesheet" href="/assets/styles/partials/footer.css">
+    <link rel="stylesheet" href="/assets/styles/partials/form.css">
+    <link rel="stylesheet" href="/assets/styles/mediaqueries.css">
+
+    <title>ALPHANIMES</title>
+  </head>
+  <body class="light-theme">
+
+    <header>
+      <input id="menu-toogle" type="checkbox">
+
+      <label for="menu-toogle">
+          <div class="button">
+              <span class="burger-bar"></span>
+          </div>
+      </label>   
+
+      <h1><a href="" class="logo">ALPHANIMES</a></h1>
+
+      <button class="theme">
+          <span class="material-icons" id="mode">light_mode</span>
+          <p>LIGHT</p>
+      </button>
+
+      <ul class="nav-options">
+          <nav class="searchbar">
+              <span href="#" class="material-icons">search</span>
+              <input class='search' type="text">
+          </nav>
+          <li><a href="#filme">Filme</a></li>
+          <li><a href="#tokusatsu">Tokusatsu</a></li>
+          <li><a href="#dublado">Dublado</a></li>
+          <li><a href="#legendado">Legendado</a></li>
+      </ul>
+    </header>
+    
+    <main class="initial-page-content">
+      <h2>Lançamentos Semanais</h2>
+    
+      <section class="carousel">
+        <div class="card">
+          <img src="" alt="">
+          <div class="text-card"></div>
+        </div>
+
+        <div class="card">
+          <img src="" alt="">
+          <div class="text-card"></div>
+        </div>
+
+        <div class="card">
+          <img src="" alt="">
+          <div class="text-card"></div>
+        </div>
+        
+        <div class="card">
+          <img src="" alt="">
+          <div class="text-card"></div>
+        </div>
+
+        <div class="card">
+          <img src="" alt="">
+          <div class="text-card"></div>
+        </div>
+        
+        <div class="card">
+          <img src="" alt="">
+          <div class="text-card"></div>
+        </div>
+
+        <div class="card">
+          <img src="" alt="">
+          <div class="text-card"></div>
+        </div>
+
+        <div class="card">
+          <img src="" alt="">
+          <div class="text-card"></div>
+        </div>
+
+        <div class="card">
+          <img src="" alt="">
+          <div class="text-card"></div>
+        </div>
+        
+        <div class="card">
+          <img src="" alt="">
+          <div class="text-card"></div>
+        </div>
+
+        <div class="card">
+          <img src="" alt="">
+          <div class="text-card"></div>
+        </div>
+        
+        <div class="card">
+          <img src="" alt="">
+          <div class="text-card"></div>
+        </div>
+
+      </section>
+    </main>
+
+    <form action="https://api.staticforms.xyz/submit" method="POST">
+      <input type="hidden" name="accessKey" value="CHAVE DE ACESSO STATIC FORMS">
+      <fieldset>
+        <div class="field">
+          <label>E-mail*</label>
+          <input type="email" name="email" id="email" required>
+        </div>
+        <div class="field">
+          <label>Assunto</label>
+          <input type="text" name="subject" id="subject">
+        </div>
+        <div class="field">
+          <label>Mensagem*</label>
+          <textarea rows="10" name="message" id="message" required></textarea>
+        </div>
+      </fieldset>
+      <div class="outside">
+        <a id='observation'>Obrigatório*</a>
+        <button type="submit" id="submit">ENVIAR</button>
+      </div>
+      <input type="hidden" name="redirectTo" value='http://127.0.0.1:5500/index.html'>
+    </form>
+
+    <footer>
+      <ul class="footer-options">
+        <li id="contact">
+          <span class="material-icons">email</span>
+          <a href="#contato">Contato</a>
+        </li>
+        <li>
+          <span class="material-icons">assignment</span>
+          <a href="#termosdeuso">Termos de Uso</a>
+        </li>
+        <li>
+          <span class="material-icons">security</span>
+          <a href="#privacidade">Política de Privacidade</a>
+        </li>
+        <li>
+          <span class="material-icons">public</span>
+          <a href="#redessociais">Redes Sociais</a>
+        </li>
+        <li>
+          <span class="material-icons">people</span>
+          <a href="#parceiros">Parceiros</a>
+        </li>
+      </ul>
+    </footer>
+    
+    <!-- Links JavaScript -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick.js"></script>
+    <script type='text/javascript' src="/assets/js/carousel.js"></script>
+    <script type='text/javascript' src="/assets/js/api_request.js"></script>
+    <script type='text/javascript' src="/assets/js/control.js"></script>
+  </body>
 </html>

@@ -1,0 +1,53 @@
+@media screen and (max-width:767px) {
+    header {
+        justify-content: space-around;
+
+        overflow: visible;
+        
+        z-index: 1;
+    }
+
+    form {width: 90%}
+
+    .field input {width: 97.75%}
+
+    .nav-options {display: none}
+
+    #menu-toogle:checked ~ .nav-options {
+        flex-direction: column;
+
+        position: absolute;
+
+        top: 9.85vh;
+
+        text-align: center;
+
+        background-color: var(--background-color);
+    }
+
+    #menu-toogle:checked ~ .nav-options,
+    label .button {display: block}
+
+    #menu-toogle:checked ~ .nav-options,
+    .nav-options li {width: 100vw}
+
+    .searchbar {
+        margin: 2vh auto;
+        width: 80%;
+    }
+
+    #menu-toogle:checked ~ label .burger-bar {
+        transform: rotate(45deg)
+    }
+
+    #menu-toogle:checked ~ label .burger-bar::after,
+    #menu-toogle:checked ~ label .burger-bar::before {
+        transform: rotate(90deg) translateY(0)
+    }
+
+    .initial-page-content h2 {text-align: center}
+}
+
+@media screen and (max-width:425px) {
+    footer .footer-options li .material-icons {display: block}
+}
