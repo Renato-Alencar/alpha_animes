@@ -7,22 +7,20 @@ const body = document.querySelector('body')
 const color = document.querySelector('#mode')
 const text = document.querySelector('p')
 const submit = document.querySelector('#submit')
+const info = document.getElementById('info')
 
-submit.addEventListener('click', () => alert('Mensagem enviada com sucesso!'))
+function TextSendMessage() {
+   let accessKey = document.getElementById('accessKey').value
 
-theme.addEventListener('click', () => {
+   if(accessKey !== '' && accessKey !== "CHAVE DE ACESSO STATIC FORMS") 
+      info.innerHTML = 'Mensagem enviada!'
+}
 
-   if(body.classList == 'light-theme') {
-      text.innerHTML = 'DARK'
-      color.innerHTML = 'dark_mode' 
-      body.classList.add('dark-theme')
-   }
-   else {
-      text.innerHTML = 'LIGHT'
-      color.innerHTML = 'light_mode'
-      body.classList.remove('dark-theme') 
-   }  
-})
+function toChangeTheme(current, _new) {
+   text.innerHTML = `${_new}`.toUpperCase()
+   color.innerHTML = `${_new}_mode` 
+   body.classList.replace(`${current}-theme`, `${_new}-theme`)
+}
 
 function toPressButton(hiddenPage, showPage) {
    
@@ -34,3 +32,7 @@ function toPressButton(hiddenPage, showPage) {
 
 contact.addEventListener('click', () => {toPressButton(homepage, form)})
 logo.addEventListener('click', () => {toPressButton(form, homepage)})
+submit.addEventListener('click', () => {TextSendMessage()})
+theme.addEventListener('click', function() { 
+   body.classList == 'light-theme' ? toChangeTheme('light', 'dark') : toChangeTheme('dark', 'light')
+})

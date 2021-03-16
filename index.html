@@ -41,7 +41,7 @@
       <ul class="nav-options">
           <nav class="searchbar">
               <span href="#" class="material-icons">search</span>
-              <input class='search' type="text">
+              <input class='search' placeholder="Busque por..." type="text">
           </nav>
           <li><a href="#filme">Filme</a></li>
           <li><a href="#tokusatsu">Tokusatsu</a></li>
@@ -118,25 +118,26 @@
     </main>
 
     <form action="https://api.staticforms.xyz/submit" method="POST">
-      <input type="hidden" name="accessKey" value="CHAVE DE ACESSO STATIC FORMS">
+      <input type="hidden" name="accessKey" id='accessKey' value="CHAVE DE ACESSO STATIC FORMS">
       <fieldset>
         <div class="field">
           <label>E-mail*</label>
-          <input type="email" name="email" id="email" required>
+          <input type="email" name="email" placeholder="exemplo@email.com" id="email" required>
         </div>
         <div class="field">
           <label>Assunto</label>
-          <input type="text" name="subject" id="subject">
+          <input type="text" name="subject" id="subject" placeholder="Título" value="ALPHANIMES">
         </div>
         <div class="field">
           <label>Mensagem*</label>
-          <textarea rows="10" name="message" id="message" required></textarea>
+          <textarea rows="10" name="message" placeholder="Digite aqui" id="message" required></textarea>
         </div>
       </fieldset>
       <div class="outside">
         <a id='observation'>Obrigatório*</a>
-        <button type="submit" id="submit">ENVIAR</button>
+        <button id="submit" type="submit">ENVIAR</button>
       </div>
+      <a id="info"></a>
       <input type="hidden" name="redirectTo" value='http://127.0.0.1:5500/index.html'>
     </form>
 
