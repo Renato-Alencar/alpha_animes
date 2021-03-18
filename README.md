@@ -26,7 +26,7 @@ API feita em PHP para cadastro dos animes no WordPress.
 
 ### Requisitos:
 - WordPress instalado
-- Colocar a pasta API dentro da pasta **themes** continda nas pastas padrões da instalação do wordpress.
+- Colocar a pasta API dentro da pasta **themes** cotinda nas pastas padrões da instalação do WordPress.
 
 ## Deploy no Heroku
 - Clique [aqui](https://alphanimes.herokuapp.com/) para visualizar a Landing Page ALPHANIMES.
