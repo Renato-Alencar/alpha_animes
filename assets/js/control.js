@@ -1,25 +1,51 @@
-const theme = document.querySelector('.theme')
-const contact = document.querySelector('#contact')
-const logo = document.querySelector('.logo')
-const homepage = document.querySelector('main')
-const form = document.querySelector('form')
-const body = document.querySelector('body')
-const color = document.querySelector('#mode')
-const text = document.querySelector('p')
-const submit = document.querySelector('#submit')
-const info = document.getElementById('info')
+const THEME = document.querySelector('.theme')
+const CONTACT = document.querySelector('#contact')
+const LOGO = document.querySelector('.logo')
+const HOMEPAGE = document.querySelector('main')
+const FORM = document.querySelector('form')
+const BODY = document.querySelector('body')
+const COLOR = document.querySelector('#mode')
+const TEXT = document.querySelector('p')
+const SUBMIT = document.querySelector('#submit')
+const INFO = document.querySelector('#info')
+const POPUP = document.querySelector('#modal-container')
+const ACESSKEY = document.querySelector('#accessKey')
+const REGISTERBUTTON = document.querySelector('.modal-register')
+const CLOSE = document.querySelector('.modal-close')
 
-function TextSendMessage() {
-   let accessKey = document.getElementById('accessKey').value
+function closePopup() {
+   return POPUP.style.display = 'none'
+}
 
-   if(accessKey !== '' && accessKey !== "CHAVE DE ACESSO STATIC FORMS") 
-      info.innerHTML = 'Mensagem enviada!'
+function loadPopup() {
+   return POPUP.style.display = 'block'
+}
+
+function registerAcessKey() {
+   let modalInput = document.querySelector('.modal-input')
+
+   closePopup()
+
+   return ACESSKEY.value = modalInput.value
+}
+
+function textSendMessage() {
+   let message = document.querySelector('#message').value.trim()
+   let email = document.querySelector('#email').value.trim()
+   let verifyEmail = /\S+@\S+\.\S+/
+
+   if(email === verifyEmail && message !== '' && ACESSKEY.value.trim() !== '') {
+      INFO.innerHTML = 'Mensagem enviada!' 
+   }
+      
+   else if(ACESSKEY.value.trim() === '') loadPopup()
 }
 
 function toChangeTheme(current, _new) {
-   text.innerHTML = `${_new}`.toUpperCase()
-   color.innerHTML = `${_new}_mode` 
-   body.classList.replace(`${current}-theme`, `${_new}-theme`)
+   TEXT.innerHTML = `${_new}`.toUpperCase()
+   COLOR.innerHTML = `${_new}_mode`
+
+   return BODY.classList.replace(`${current}-theme`, `${_new}-theme`)
 }
 
 function toPressButton(hiddenPage, showPage) {
@@ -30,9 +56,12 @@ function toPressButton(hiddenPage, showPage) {
    }
 }
 
-contact.addEventListener('click', () => {toPressButton(homepage, form)})
-logo.addEventListener('click', () => {toPressButton(form, homepage)})
-submit.addEventListener('click', () => {TextSendMessage()})
-theme.addEventListener('click', function() { 
-   body.classList == 'light-theme' ? toChangeTheme('light', 'dark') : toChangeTheme('dark', 'light')
+CONTACT.addEventListener('click', () => toPressButton(HOMEPAGE, FORM))
+CONTACT.addEventListener('click', loadPopup) 
+LOGO.addEventListener('click', () => toPressButton(FORM, HOMEPAGE))
+CLOSE.addEventListener('click', closePopup)
+REGISTERBUTTON.addEventListener('click', registerAcessKey)
+SUBMIT.addEventListener('click', textSendMessage)
+THEME.addEventListener('click', function() { 
+   BODY.classList == 'light-theme' ? toChangeTheme('light', 'dark') : toChangeTheme('dark', 'light')
 })

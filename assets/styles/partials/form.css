@@ -1,22 +1,74 @@
-form {
-    display: none;
+#modal-container {
+    width: 100vw;
+    height: 100vh;
 
-    margin: auto;
+    position: fixed;
+    
+    z-index: 200;
+
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
-#info {
-    text-align: right;
+.modal {
+    width: 35vw;
+    height: auto;
 
-    position: absolute;
+    position: relative;
+    top: 30%;
+
+    padding: 5vh 0 1vh 0;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: .5rem;
 }
 
-form, #info {width: 70%}
+.modal-title {
+    text-align: center;
+    font-weight: bold;
+}
+
+.modal-title a {text-decoration: underline;}
+
+#modal-container,
+.form-contact { display: none }
+
+.modal-title,
+.modal-form {
+    width: 90%;
+    
+    padding-top: 1vh;
+}
+
+.modal-title, .modal-input,
+.modal-register {
+    margin-top: 2vh;
+
+    font-size: clamp(.75rem, 1.1vw + .5rem, 2.4rem);
+}
+
+.form-contact, .modal {margin: auto}
+
+#info {text-align: right}
+
+#modal-container, .modal-close {top: 0}
+
+#info, .modal-close {position: absolute}
+
+.modal-close,
+.modal-register {align-self: flex-end}
+
+.form-contact, #info {width: 70%}
 
 fieldset {width: 100%}
 
-.field, .outside {display: flex}
-
-.field {flex-direction: column}
+.modal,
+.modal-form,
+.field {
+    display: flex;
+    flex-direction: column;
+}
 
 .field input {
     width: 50%;
@@ -25,10 +77,14 @@ fieldset {width: 100%}
 }
 
 .outside {
+    display: flex;
+
     align-items: center;
     justify-content: space-between;
 }
 
+.modal-close,
+.modal-register,
 .outside #submit {
     padding: 1.5vh;
 
@@ -36,6 +92,8 @@ fieldset {width: 100%}
     background-color: var(--background-color);
 }
 
+.modal-close:hover,
+.modal-register:hover,
 .outside #submit:hover {
     transition: .2s;
 
@@ -44,22 +102,28 @@ fieldset {width: 100%}
     background-color: var(--select-background-color);
 }
 
-#submit, #observation, #info, .field label {
+#submit, 
+#observation, 
+#info, .field label {
     font-size: large;
     font-weight: bold;
 
     margin-top: 2vh;
 }
 
-#submit, .field input, textarea {
+.modal-close, .modal-input,
+.modal-register, #submit, 
+.field input, textarea {
     border-radius: 4px;
 
     outline: none;
     border: none;
-
-    font-size: medium;
 }
 
+#submit, 
+.field input, textarea {font-size: medium}
+
+.modal, .modal-input,
 .field input, textarea {
     border: 1px solid black;
 
@@ -68,5 +132,6 @@ fieldset {width: 100%}
     background-color: var(--input-background-color);
 }
 
-#submit, #observation, #info, 
+.modal-title, .modal-title a,
+.modal-input, #submit, #observation, #info, 
 .field label, .field input, textarea { color: var(--text-title-color) }

@@ -117,8 +117,8 @@
       </section>
     </main>
 
-    <form action="https://api.staticforms.xyz/submit" method="POST">
-      <input type="hidden" name="accessKey" id='accessKey' value="CHAVE DE ACESSO STATIC FORMS">
+    <form action="https://api.staticforms.xyz/submit" class="form-contact" method="POST">
+      <input type="hidden" name="accessKey" id="accessKey">
       <fieldset>
         <div class="field">
           <label>E-mail*</label>
@@ -166,6 +166,21 @@
       </ul>
     </footer>
     
+    <div id="modal-container">
+      <div class="modal">
+        <button class="modal-close">
+          <span class="material-icons">close</span>
+        </button>
+        <h3 class="modal-title">Insira a sua chave de acesso da página 
+          <a href="https://www.staticforms.xyz/" target="_blank">Static Forms</a>
+        </h3>
+        <form class="modal-form">
+          <input type="text" class="modal-input" placeholder="Insira aqui">
+          <button class="modal-register">CADASTRAR</button>
+        </form>
+      </div>
+    </div>
+
     <!-- Links JavaScript -->
     <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
