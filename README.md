@@ -19,7 +19,7 @@ Desenvolver uma Landing Page responsiva, utilizando as tecnologias HTML, CSS e J
 **Obs.: Pode usar qualquer framework ou biblioteca.**<br>
 
 > **IMPORTANTE**<br>
-> **Envio do formulário: o usuário precisa obter a chave de acesso na página [Static Forms](https://www.staticforms.xyz/), abrir o console e colar no campo indicado (*value*) da primeira *tag input* dentro da *tag form* no arquivo HTML.**
+> **Envio do formulário: o usuário precisa obter a chave de acesso na página [Static Forms](https://www.staticforms.xyz/) e cadastrar no pop-up da página Contato.**
 
 ## API em WordPress
 API feita em PHP para cadastro dos animes no WordPress.
